@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DHT Readings</title>
+    <style type="text/css">
+        body {
+            background-color: #F5F5F5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .data-container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .data-item {
+            text-align: center;
+        }
+
+        .data-item h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .data-item p {
+            font-size: 48px;
+            font-weight: bold;
+            color: #6EB7FF;
+        }
+
+        .data-head {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #FFF;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="data-head">Pen 1 Weight</div>
+
+    <div class="data-container">
+        <div class="data-item">
+            <h2>Pen 1 Weight</h2>
+            <p class="value" id="weight">22 &#8451;</p>
+        </div>
+
+
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBNS_F-e14KEHuJAezYZxnbbVC8twIHboc",
+            authDomain: "esp32-fame.firebaseapp.com",
+            databaseURL: "https://esp32-fame-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "esp32-fame",
+            storageBucket: "esp32-fame.appspot.com",
+            messagingSenderId: "517095421240",
+            appId: "1:517095421240:web:4d1023ac677d6eff87bdcd",
+            measurementId: "G-QEGTJRPM80"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+        // getting reference to the database
+        var database = firebase.database();
+
+        //getting reference to the data we want
+        var dataRef1 = database.ref('/UsersData/ViZZOz8ytAYNvv3CY1FFVoysVnf1/readings/Pen 1');
+
+        //fetch the data
+        dataRef1.on('value', function (getdata1) {
+            var weight = getdata1.val();
+            document.getElementById('weight').innerHTML = weight;
+        })
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
