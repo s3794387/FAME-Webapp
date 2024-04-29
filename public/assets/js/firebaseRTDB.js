@@ -32,13 +32,14 @@ const firebaseConfig = {
 	measurementId: "G-QEGTJRPM80"
 };
 
-initializeApp(firebaseConfig);
+var app = initializeApp(firebaseConfig);
 
 // getting reference to the authentication service
 const auth = getAuth();
 // getting reference to the database
 const database = getDatabase();
 const user = auth.currentUser;
+
 
 onAuthStateChanged(auth, function (user) {
 	if (user) {
@@ -77,7 +78,7 @@ onAuthStateChanged(auth, function (user) {
 			}
 
 			// Main Training Process
-			if (currentPen != 0 && currentPen < 4 && !error) {
+			if (currentPen != 0 && currentPen < 5 && !error) {
 				if (!proceed) {
 					pickUp();
 				} else {
@@ -88,8 +89,14 @@ onAuthStateChanged(auth, function (user) {
 			}
 		})
 	}
+
+	//Do sth if user not Logged in
+	else {
+
+	}
 });
 
+// Check if all the pens are in the correct place
 function initialCheck() {
 	for (var pen in pens_weight) {
 		if (pens_weight[pen] < 10) {
@@ -166,3 +173,5 @@ function sleep(milliseconds) {
 		currentDate = Date.now();
 	} while (currentDate - date < milliseconds);
 }
+
+export { user, app}
