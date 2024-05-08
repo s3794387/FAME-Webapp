@@ -38,6 +38,10 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css" />
     <link rel="stylesheet" href="assets/css/animated.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
+    <link
+      href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -53,6 +57,7 @@ https://templatemo.com/tm-570-chain-app-dev
       </div>
     </div>
     <!-- ***** Preloader End ***** -->
+
     <!-- ***** Header Area Start ***** -->
     <header
       class="header-area header-sticky wow slideInDown"
@@ -74,10 +79,10 @@ https://templatemo.com/tm-570-chain-app-dev
                   <a href="index.html">Home</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="progress.html">Progress</a>
+                  <a href="progress.html" class="active">Progress</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="training_setup.html" class="active">Training</a>
+                  <a href="training_setup.html">Training</a>
                 </li>
                 <li class="scroll-to-section">
                   <a href="#pricing">Profile</a>
@@ -223,35 +228,34 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </section>
     </div>
-
     <!-- Training Header -->
     <div id="about" class="about-us section">
       <div class="container">
         <div class="row">
           <div class="col-lg align-self-center">
             <div class="section-heading">
-              <h4><em>Before You Start</em></h4>
+              <h4><em>Your Progress</em></h4>
               <img src="assets/images/heading-line-dec.png" alt="" />
             </div>
             <div class="row justify-content-center">
               <div class="col">
+                <div class="box-item" id="calendar"></div>
                 <div class="box-item">
-                  <h4><a href="./setup.html">Device Setup</a></h4>
-                  <p>Click here if you have not set-up your casing.</p>
+                  <h4 id="date">Date</h4>
                 </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-6">
                 <div class="box-item">
-                  <h4><a href="./documentation.html">Documentation</a></h4>
-                  <p>
-                    Click here if you would like to see more information about
-                    the application.
-                  </p>
+                  <h4>Morning</h4>
+                  <h3 id="morning"></h3>
                 </div>
+              </div>
+              <div class="col-6">
                 <div class="box-item">
-                  <div class="gradient-button">
-                    <a href="training.html"
-                      ><i class="fa fa-play"></i> &nbsp;&nbsp;Start Training</a
-                    >
-                  </div>
+                  <h4>Evening</h4>
+                  <h3 id="evening"></h3>
                 </div>
               </div>
             </div>
@@ -351,8 +355,12 @@ https://templatemo.com/tm-570-chain-app-dev
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/popup.js"></script>
+    <script src="vendor/tempusdominus/js/moment.min.js"></script>
+    <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script type="module" src="assets/js/firebaseInit.js"></script>
     <script type="module" src="assets/js/firebaseAuth.js"></script>
+    <script type="module" src="assets/js/firebaseProgress.js"></script>
   </body>
 </html>

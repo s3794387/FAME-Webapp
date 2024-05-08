@@ -1,5 +1,5 @@
 (function ($) {
-  "use strict";
+  ("use strict");
 
   // Header Type = Fixed
   $(window).scroll(function () {
@@ -105,7 +105,7 @@
   $(".scroll-to-section a[href*=\\#]:not([href=\\#])").on("click", function () {
     if (
       location.pathname.replace(/^\//, "") ==
-      this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -211,4 +211,5 @@
       }
     });
   }
+  // Calendar
 })(window.jQuery);

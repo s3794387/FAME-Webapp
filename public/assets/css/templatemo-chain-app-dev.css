@@ -190,6 +190,7 @@ body {
 .section-heading h4 em {
   font-style: normal;
   color: #4b8ef1;
+  font-size: 40px;
 }
 
 .section-heading img {
@@ -277,7 +278,7 @@ body {
   padding: 10px 20px !important;
   color: #fff !important;
   text-transform: capitalize;
-  font-size: 15px;
+  font-size: 20px;
   background: rgb(19, 175, 240);
   background: linear-gradient(105deg, rgba(91, 104, 235, 1) 0%, rgba(40, 225, 253, 1) 100%);
   border-radius: 23px;
@@ -444,7 +445,7 @@ header
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 24px;
   color: #2a2a2a;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
@@ -1184,7 +1185,7 @@ About Us
 }
 
 .about-us .box-item h4 a {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   margin-top: 8px;
   color: #2a2a2a;
@@ -1193,6 +1194,8 @@ About Us
 
 .about-us .box-item p {
   margin-bottom: 0px;
+  color: #4b4b4b;
+  font-size: 20px;
 }
 
 .about-us .box-item:hover h4 a {
@@ -1200,7 +1203,7 @@ About Us
 }
 
 .about-us .gradient-button {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -2442,4 +2445,51 @@ responsive
   form#contact {
     padding: 30px;
   }
+}
+
+/*** Date Picker ***/
+.bootstrap-datetimepicker-widget.bottom {
+  top: auto !important;
+}
+
+.bootstrap-datetimepicker-widget .table * {
+  border-bottom-width: 0px;
+}
+
+.bootstrap-datetimepicker-widget .table th {
+  font-weight: 500;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: var(--primary);
+}
+
+.bootstrap-datetimepicker-widget table td.today::before {
+  border-bottom-color: var(--primary);
+}
+
+.specialRed {
+  background-color: orange;
+  color: #ff0000;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.specialGreen {
+  background-color: orange;
+  color: #48ff00;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.bootstrap-datetimepicker-widget table td.day {
+  font-size: 150%;
+}
+
+.bootstrap-datetimepicker-widget table thead {
+  font-size: 150%;
 }

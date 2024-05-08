@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import {app} from "./firebaseInit.js";
 import {
 	getAuth,
 	onAuthStateChanged
@@ -10,7 +10,7 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
 
-var pens_type = { 1: "mint", 2: "Thyme", 3: "Mandarin", 4: "Jasmine" };
+const pens_type = { 1: "mint", 2: "thyme", 3: "mandarin", 4: "jasmine" };
 var pens_weight = { 1: 0, 2: 0, 3: 0, 4: 0 };
 var currentPen = 0;
 var currentWeight = 0;
@@ -20,19 +20,6 @@ var error = false;
 var errorPen = 0;
 var timerStarted = false;
 var timerPaused = false;
-
-const firebaseConfig = {
-	apiKey: "AIzaSyBNS_F-e14KEHuJAezYZxnbbVC8twIHboc",
-	authDomain: "esp32-fame.firebaseapp.com",
-	databaseURL: "https://esp32-fame-default-rtdb.asia-southeast1.firebasedatabase.app",
-	projectId: "esp32-fame",
-	storageBucket: "esp32-fame.appspot.com",
-	messagingSenderId: "517095421240",
-	appId: "1:517095421240:web:4d1023ac677d6eff87bdcd",
-	measurementId: "G-QEGTJRPM80"
-};
-
-var app = initializeApp(firebaseConfig);
 
 // getting reference to the authentication service
 const auth = getAuth();
@@ -174,4 +161,4 @@ function sleep(milliseconds) {
 	} while (currentDate - date < milliseconds);
 }
 
-export { user, app}
+export { user }
