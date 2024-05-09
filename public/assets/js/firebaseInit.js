@@ -39,6 +39,9 @@ onAuthStateChanged(auth, function (user) {
     set(dataRef1, {
       Name: "Quy Dat Le",
       Email: "quydat1711@gmail.com",
+      DoB: "17/11/1998",
+      Gender: "Male",
+      SniffSet: "2",
       CommenceDate: "10/10/2023",
     });
     set(dataRef2, {

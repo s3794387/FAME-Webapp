@@ -76,7 +76,7 @@ https://templatemo.com/tm-570-chain-app-dev
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="#top" class="active">Home</a>
+                  <a href="index.html">Home</a>
                 </li>
                 <li class="scroll-to-section">
                   <a href="progress.html">Progress</a>
@@ -84,16 +84,16 @@ https://templatemo.com/tm-570-chain-app-dev
                 <li class="scroll-to-section">
                   <a href="training_setup.html">Training</a>
                 </li>
-                <li class="scroll-to-section">
-                  <a href="profile.html">Profile</a>
+                <li class="scroll-to-section" class="active">
+                  <a href="#">Profile</a>
                 </li>
                 <li>
-                  <div class="gradient-button" style="display: none;">
+                  <div class="gradient-button">
                     <a id="sign_in_modal_trigger" href="#sign-in-modal"
-                      ><i class="fa fa-sign-in-alt"></i> Sign In</a
+                      ><i class="fa fa-sign-in-alt"></i> Sign In Now</a
                     >
                   </div>
-                  <div class="gradient-button" style="display: none;">
+                  <div class="gradient-button">
                     <a id="sign_out_modal_trigger" href="#user-modal"
                       ><i class="fa fa-user-alt"></i>
                     </a>
@@ -228,6 +228,81 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </section>
     </div>
+    <!-- Training Header -->
+    <div id="about" class="about-us section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg align-self-center">
+            <div class="section-heading">
+              <h4><em>Your Profile</em></h4>
+              <img src="assets/images/heading-line-dec.png" alt="" />
+            </div>
+            <div class="col-xl-6 mx-auto">
+              <div class="bg-light rounded h-100 p-4">
+                <div class="form-floating mb-3">
+                  <input
+                    type="input"
+                    class="form-control"
+                    id="nameInput"
+                    placeholder="John Doe"
+                    disabled="disabled"
+                  />
+                  <label for="nameInput">Full Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailInput"
+                    placeholder="name@example.com"
+                    disabled="disabled"
+                  />
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-select"
+                    id="genderSelect"
+                    aria-label="Floating label select example"
+                    disabled="disabled"
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label for="floatingSelect">Gender</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    name="commenceDate"
+                    id="commenceDate"
+                    disabled="disabled"
+                  />
+                  <label for="commenceDate">Commence Date</label>
+                </div>
+                <div class="form-floating">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="commentInput"
+                    style="height: 150px"
+                    disabled="disabled"
+                  ></textarea>
+                  <label for="floatingTextarea">Comments</label>
+                </div>
+                <div class="gradient-button">
+                  <a id="editBtn"
+                    ><i class="fa fa-edit"></i> &nbsp;&nbsp;Edit Profile</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div
       class="main-banner wow fadeIn"
@@ -237,31 +312,11 @@ https://templatemo.com/tm-570-chain-app-dev
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div
-                  class="left-content show-up header-text wow fadeInLeft"
-                  data-wow-duration="1s"
-                  data-wow-delay="1s"
-                >
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <h2>Olfactory Training In The Palm Of Your Hand</h2>
-                      <h4>Intro</h4>
-                    </div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div
-                  class="right-image wow fadeInRight"
-                  data-wow-duration="1s"
-                  data-wow-delay="0.5s"
-                >
-                  <img src="assets/images/slider-dec.png" alt="" />
-                </div>
-              </div>
-            </div>
+          <div class="quickstart-user-details-container" style="display: none">
+            Firebase sign-in status:
+            <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Firebase auth <code>currentUser</code> object value:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
           </div>
         </div>
       </div>
@@ -272,17 +327,25 @@ https://templatemo.com/tm-570-chain-app-dev
           <div class="col-lg-3">
             <div class="footer-widget">
               <h4>Contact Us</h4>
-              <p>Lua Perimal-Lewis</p>
-              <p><a href="#">+61 8 82012069</a></p>
-              <p><a href="#">lua.perimal-lewis@flinders.edu.au</a></p>
+              <p>Rio de Janeiro - RJ, 22795-008, Brazil</p>
+              <p><a href="#">010-020-0340</a></p>
+              <p><a href="#">info@company.co</a></p>
             </div>
           </div>
           <div class="col-lg-3">
             <div class="footer-widget">
               <h4>About Us</h4>
               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Pricing</a></li>
+              </ul>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Pricing</a></li>
               </ul>
             </div>
           </div>
@@ -338,5 +401,6 @@ https://templatemo.com/tm-570-chain-app-dev
     <script src="assets/js/custom.js"></script>
     <script type="module" src="assets/js/firebaseInit.js"></script>
     <script type="module" src="assets/js/firebaseAuth.js"></script>
+    <script type="module" src="assets/js/firebaseProfile.js"></script>
   </body>
 </html>

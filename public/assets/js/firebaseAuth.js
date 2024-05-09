@@ -14,7 +14,6 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const signInButton = document.getElementById("sign-in-btn");
 const signOutButton = document.getElementById("sign-out-btn");
-const accountDetails = document.getElementById("quickstart-account-details");
 
 // getting reference to the authentication service
 const auth = getAuth();
@@ -60,7 +59,6 @@ onAuthStateChanged(auth, function (user) {
     const isAnonymous = user.isAnonymous;
     const uid = user.uid;
     const providerData = user.providerData;
-    accountDetails.textContent = JSON.stringify(user, null, "  ");
     $("#sign_in_modal_trigger").parent().hide();
     $("#sign_in_modal_trigger").leanModal({
       top: 100,
@@ -72,7 +70,6 @@ onAuthStateChanged(auth, function (user) {
   } else {
     // User is signed out.
     signInButton.textContent = "Sign in";
-    accountDetails.textContent = "null";
 
     $("#sign_in_modal_trigger").parent().show();
     $("#sign_out_modal_trigger").parent().hide();
