@@ -5,6 +5,7 @@ import {
 import {
   getDatabase,
   ref,
+  update,
   onValue,
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 // Import the functions you need from the SDKs you need
@@ -16,14 +17,15 @@ import {
 const auth = getAuth();
 // getting reference to the database
 const database = getDatabase();
-const user = auth.currentUser;
 var progress = {};
+const today = new Date();
+var commenceDate;
 
 function updateCalendar() {
   for (var date in progress) {
     if (
-      progress[date]["Morning"] == "Finished" &&
-      progress[date]["Evening"] == "Finished"
+      progress[date]["Morning"]["Finished"] &&
+      progress[date]["Evening"]["Finished"]
     ) {
       markGreen(new Date(date));
     } else {
@@ -33,20 +35,42 @@ function updateCalendar() {
 }
 onAuthStateChanged(auth, function (user) {
   if (user) {
-    var dataRef = ref(database, "/UsersData/" + user.uid + "/Progress");
-    onValue(dataRef, (snapshot) => {
+    var dataRef1 = ref(database, "/UsersData/" + user.uid + "/Progress");
+    var dataRef2 = ref(database, "/UsersData/" + user.uid + "/UserInfo");
+    onValue(dataRef2, (snapshot) => {
+      if (snapshot.exists()) {
+        commenceDate = new Date(snapshot.val().CommenceDate);
+      } else {
+        console.log("No data available");
+      }
+    });
+
+    onValue(dataRef1, (snapshot) => {
       snapshot.forEach((childSnapshot) => {
         var date = new Date(childSnapshot.key);
         progress[date] = childSnapshot.val();
-        if (
-          progress[date]["Morning"] == "Finished" &&
-          progress[date]["Evening"] == "Finished"
-        ) {
-          markGreen(date);
-        } else {
-          markRed(date);
-        }
       });
+      for (
+        let dateIndex = commenceDate;
+        dateIndex < today;
+        dateIndex.setDate(dateIndex.getDate() + 1)
+      ) {
+        if (!progress[dateIndex]) {
+          update(dataRef1, {
+            [dateIndex
+              .toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+              })
+              .replace(/\//g, "-")]: {
+              Morning: { Finished: false },
+              Evening: { Finished: false },
+            },
+          });
+        }
+      }
+      updateCalendar();
     });
   }
 });
@@ -61,7 +85,9 @@ function markRed(date) {
     }) +
     '"]';
   let x = $(path);
-  x[0].classList.add("specialRed");
+  if (x.length) {
+    x[0].classList.add("specialRed");
+  }
 }
 
 function markGreen(date) {
@@ -74,7 +100,9 @@ function markGreen(date) {
     }) +
     '"]';
   let x = $(path);
-  x[0].classList.add("specialGreen");
+  if (x.length) {
+    x[0].classList.add("specialGreen");
+  }
 }
 
 $("#calendar").datetimepicker({
@@ -83,19 +111,27 @@ $("#calendar").datetimepicker({
   sideBySide: true,
 });
 $(function () {
+  $("#calendar").on("update.datetimepicker", function (e) {
+    updateCalendar();
+  });
+});
+$(function () {
   $("#calendar").on("change.datetimepicker", function (e) {
     var selectedDate = new Date(e.date._d.setHours(0, 0, 0, 0));
     document.getElementById("date").innerHTML =
       selectedDate.toLocaleDateString("en-AU");
-    var today = progress[selectedDate];
+    var day = progress[selectedDate];
     updateCalendar();
-    if (today) {
-      document.getElementById("morning").innerHTML = today.Morning;
-      document.getElementById("evening").innerHTML = today.Evening;
+    if (day) {
+      document.getElementById("morning").innerHTML = day.Morning.Finished
+        ? "Finished at " + day.Morning.TimeStamp
+        : "Not Finished";
+      document.getElementById("evening").innerHTML = day.Evening.Finished
+        ? "Finished at " + day.Evening.TimeStamp
+        : "Not Finished";
     } else {
       document.getElementById("morning").innerHTML = "";
       document.getElementById("evening").innerHTML = "";
     }
   });
 });
-document.body.addEventListener("click", updateCalendar(), true); 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
@@ -38,7 +38,10 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css" />
     <link rel="stylesheet" href="assets/css/animated.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/timer.css" />
+    <link
+      href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -67,7 +70,7 @@ https://templatemo.com/tm-570-chain-app-dev
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Chain App Dev" />
+                <img src="assets/images/logo.png" alt="Chain App Dev" width="100" height="100" />
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
@@ -76,7 +79,25 @@ https://templatemo.com/tm-570-chain-app-dev
                   <a href="index.html" class="active">Home</a>
                 </li>
                 <li class="scroll-to-section">
+                  <a href="progress.html">Progress</a>
+                </li>
+                <li class="scroll-to-section">
+                  <a href="training_setup.html">Training</a>
+                </li>
+                <li class="scroll-to-section">
                   <a href="profile.html">Profile</a>
+                </li>
+                <li>
+                  <div class="gradient-button" style="display: none">
+                    <a id="sign_in_modal_trigger" href="#sign-in-modal"
+                      ><i class="fa fa-sign-in-alt"></i> Sign In</a
+                    >
+                  </div>
+                  <div class="gradient-button" style="display: none">
+                    <a id="sign_out_modal_trigger" href="#user-modal"
+                      ><i class="fa fa-user-alt"></i>
+                    </a>
+                  </div>
                 </li>
               </ul>
               <a class="menu-trigger">
@@ -90,7 +111,7 @@ https://templatemo.com/tm-570-chain-app-dev
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <div id="log-in-modal" class="popupContainer" style="display: none">
+    <div id="sign-in-modal" class="popupContainer" style="display: none">
       <div class="popupHeader">
         <span class="header_title">Login</span>
         <span class="modal_close"><i class="fa fa-times"></i></span>
@@ -207,19 +228,7 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </section>
     </div>
-
-    <!-- User Content -->
-    <div class="container">
-      <div class="row">
-        <div class="quickstart-user-details-container" style="display: none">
-          Firebase sign-in status:
-          <span id="quickstart-sign-in-status">Unknown</span>
-          <div>Firebase auth <code>currentUser</code> object value:</div>
-          <pre><code id="quickstart-account-details">null</code></pre>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Training Header -->
     <div id="training-header" class="training-header section">
       <div class="container">

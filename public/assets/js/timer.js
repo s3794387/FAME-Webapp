@@ -25,6 +25,7 @@ let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+let successSound = new Audio('assets/audio/success.wav')
 
 function pauseTimer() {
         newTimeLimit -= timePassed;
@@ -42,6 +43,7 @@ function resetTimer() {
 
 
 function onTimesUp() {
+    successSound.play();
     clearInterval(timerInterval);
     timePassed = 0;
     timerInterval = null;

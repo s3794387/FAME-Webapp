@@ -5,7 +5,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 import {
   getDatabase,
-  ref,
+  ref,update,
   set,
   onValue,
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
@@ -36,22 +36,63 @@ onAuthStateChanged(auth, function (user) {
   if (user) {
     var dataRef1 = ref(database, "/UsersData/" + user.uid + "/UserInfo");
     var dataRef2 = ref(database, "/UsersData/" + user.uid + "/Progress");
-    set(dataRef1, {
+/*     update(dataRef1, {
       Name: "Quy Dat Le",
       Email: "quydat1711@gmail.com",
       DoB: "17/11/1998",
       Gender: "Male",
       SniffSet: "2",
-      CommenceDate: "10/10/2023",
-    });
-    set(dataRef2, {
-      "05-03-2024": { Morning: "Finished", Evening: "Finished" },
-      "05-04-2024": { Morning: "Finished", Evening: "Finished" },
-      "05-05-2024": { Morning: "Finished", Evening: "Finished" },
-      "05-06-2024": { Morning: "Finished", Evening: "Finished" },
-      "05-07-2024": { Morning: "Unfinished", Evening: "Finished" },
-      "05-08-2024": { Morning: "Unfinished", Evening: "Unfinished" },
-      "05-09-2024": { Morning: "Finished", Evening: "Finished" },
+      CommenceDate: "04/30/2024",
+    }); */
+    update(dataRef2, {
+      "05-03-2024": {
+        Morning: { Finished: true, TimeStamp: "09:55:12" },
+        Evening: { Finished: true, TimeStamp: "17:35:43" },
+      },
+      "05-04-2024": {
+        Morning: { Finished: true, TimeStamp: "08:30:12" },
+        Evening: { Finished: true, TimeStamp: "19:35:43" },
+      },
+      "05-05-2024": {
+        Morning: { Finished: false, TimeStamp: "" },
+        Evening: { Finished: true, TimeStamp: "20:30:43" },
+      },
+      "05-06-2024": {
+        Morning: { Finished: false, TimeStamp: "" },
+        Evening: { Finished: false, TimeStamp: "" },
+      },
+      "05-07-2024": {
+        Morning: { Finished: true, TimeStamp: "09:20:11" },
+        Evening: { Finished: false, TimeStamp: "" },
+      },
+      "05-08-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-09-2024": {
+        Morning: { Finished: false, TimeStamp: "" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-10-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-11-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-12-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-13-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
+      "05-14-2024": {
+        Morning: { Finished: true, TimeStamp: "08:40:00" },
+        Evening: { Finished: true, TimeStamp: "17:45:33" },
+      },
     });
   }
 });

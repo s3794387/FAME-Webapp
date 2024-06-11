@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "firebase": "^10.11.0"
+    "@eonasdan/tempus-dominus": "^6.9.7",
+    "@popperjs/core": "^2.11.8",
+    "firebase": "^10.11.0",
+    "typescript": "^5.4.5"
   }
 }

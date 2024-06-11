@@ -38,6 +38,10 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css" />
     <link rel="stylesheet" href="assets/css/animated.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
+    <link
+      href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -53,6 +57,7 @@ https://templatemo.com/tm-570-chain-app-dev
       </div>
     </div>
     <!-- ***** Preloader End ***** -->
+
     <!-- ***** Header Area Start ***** -->
     <header
       class="header-area header-sticky wow slideInDown"
@@ -65,7 +70,12 @@ https://templatemo.com/tm-570-chain-app-dev
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Chain App Dev" />
+                <img
+                  src="assets/images/logo.png"
+                  alt="Chain App Dev"
+                  width="100"
+                  height="100"
+                />
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
@@ -80,15 +90,15 @@ https://templatemo.com/tm-570-chain-app-dev
                   <a href="training_setup.html" class="active">Training</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#pricing">Profile</a>
+                  <a href="profile.html">Profile</a>
                 </li>
                 <li>
-                  <div class="gradient-button">
+                  <div class="gradient-button" style="display: none">
                     <a id="sign_in_modal_trigger" href="#sign-in-modal"
-                      ><i class="fa fa-sign-in-alt"></i> Sign In Now</a
+                      ><i class="fa fa-sign-in-alt"></i> Sign In</a
                     >
                   </div>
-                  <div class="gradient-button">
+                  <div class="gradient-button" style="display: none">
                     <a id="sign_out_modal_trigger" href="#user-modal"
                       ><i class="fa fa-user-alt"></i>
                     </a>
@@ -229,28 +239,55 @@ https://templatemo.com/tm-570-chain-app-dev
       <div class="container">
         <div class="row">
           <div class="col-lg align-self-center">
-            <div class="section-heading">
-              <h4><em>Before You Start</em></h4>
-              <img src="assets/images/heading-line-dec.png" alt="" />
+            <div
+              class="left-content show-up header-text wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay="0s"
+            >
+              <div class="section-heading">
+                <h4><em>Before You Start</em></h4>
+                <img src="assets/images/heading-line-dec.png" alt="" />
+              </div>
             </div>
             <div class="row justify-content-center">
               <div class="col">
-                <div class="box-item">
-                  <h4><a href="./setup.html">Device Setup</a></h4>
-                  <p>Click here if you have not set-up your casing.</p>
+                <div
+                  class="left-content show-up header-text wow fadeInRight"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.5s"
+                >
+                  <div class="box-item">
+                    <h4><a href="./setup.html">Device Setup</a></h4>
+                    <p>Click here if you have not set-up your casing.</p>
+                  </div>
                 </div>
-                <div class="box-item">
-                  <h4><a href="./documentation.html">Documentation</a></h4>
-                  <p>
-                    Click here if you would like to see more information about
-                    the application.
-                  </p>
+                <div
+                  class="left-content show-up header-text wow fadeInRight"
+                  data-wow-duration="1s"
+                  data-wow-delay="1s"
+                >
+                  <div class="box-item">
+                    <h4><a href="./documentation.html">Documentation</a></h4>
+                    <p>
+                      Click here if you would like to see more information about
+                      the application.
+                    </p>
+                  </div>
                 </div>
-                <div class="box-item">
-                  <div class="gradient-button">
-                    <a href="training.html"
-                      ><i class="fa fa-play"></i> &nbsp;&nbsp;Start Training</a
-                    >
+                <div
+                  class="left-content show-up header-text wow fadeInRight"
+                  data-wow-duration="1s"
+                  data-wow-delay="1.5s"
+                >
+                  <div class="row justify-content-md-center">
+                    <div class="col" align="center">
+                      <div class="gradient-button">
+                        <a href="training.html"
+                          ><i class="fa fa-play" style="cursor: pointer"></i>
+                          &nbsp;&nbsp;Start Training</a
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

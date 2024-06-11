@@ -8,18 +8,18 @@
     />
     <meta name="description" content="" />
     <meta name="author" content="" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
     <title>Chain App Dev - App Landing Page HTML5 Template</title>
-
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
     <!--
 
 TemplateMo 570 Chain App Dev
@@ -70,13 +70,18 @@ https://templatemo.com/tm-570-chain-app-dev
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Chain App Dev" />
+                <img
+                  src="assets/images/logo.png"
+                  alt="Chain App Dev"
+                  width="100"
+                  height="100"
+                />
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="index.html">Home</a>
+                  <a href="index.html" >Home</a>
                 </li>
                 <li class="scroll-to-section">
                   <a href="progress.html" class="active">Progress</a>
@@ -85,15 +90,15 @@ https://templatemo.com/tm-570-chain-app-dev
                   <a href="training_setup.html">Training</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="#pricing">Profile</a>
+                  <a href="profile.html">Profile</a>
                 </li>
                 <li>
-                  <div class="gradient-button">
+                  <div class="gradient-button" style="display: none">
                     <a id="sign_in_modal_trigger" href="#sign-in-modal"
-                      ><i class="fa fa-sign-in-alt"></i> Sign In Now</a
+                      ><i class="fa fa-sign-in-alt"></i> Sign In</a
                     >
                   </div>
-                  <div class="gradient-button">
+                  <div class="gradient-button" style="display: none">
                     <a id="sign_out_modal_trigger" href="#user-modal"
                       ><i class="fa fa-user-alt"></i>
                     </a>
@@ -228,34 +233,47 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </section>
     </div>
-    <!-- Training Header -->
+
+    <!-- Progress Header -->
     <div id="about" class="about-us section">
       <div class="container">
         <div class="row">
           <div class="col-lg align-self-center">
-            <div class="section-heading">
-              <h4><em>Your Progress</em></h4>
-              <img src="assets/images/heading-line-dec.png" alt="" />
-            </div>
-            <div class="row justify-content-center">
-              <div class="col">
-                <div class="box-item" id="calendar"></div>
-                <div class="box-item">
-                  <h4 id="date">Date</h4>
-                </div>
+            <div
+              class="left-content show-up header-text wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay="0.5s"
+            >
+              <div class="section-heading">
+                <h4><em>Your Progress</em></h4>
+                <img src="assets/images/heading-line-dec.png" alt="" />
               </div>
             </div>
-            <div class="row justify-content-center">
-              <div class="col-6">
-                <div class="box-item">
-                  <h4>Morning</h4>
-                  <h3 id="morning"></h3>
+            <div
+              class="left-content show-up header-text wow fadeInRight"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
+              <div class="row justify-content-center">
+                <div class="col">
+                  <div class="box-item" id="calendar" style="background-color: white;"></div>
+                  <div class="box-item">
+                    <h4 id="date">Date</h4>
+                  </div>
                 </div>
               </div>
-              <div class="col-6">
-                <div class="box-item">
-                  <h4>Evening</h4>
-                  <h3 id="evening"></h3>
+              <div class="row justify-content-center">
+                <div class="col-6">
+                  <div class="box-item">
+                    <h4>Morning</h4>
+                    <h4 id="morning"></h4>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="box-item">
+                    <h4>Evening</h4>
+                    <h4 id="evening"></h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -343,21 +361,23 @@ https://templatemo.com/tm-570-chain-app-dev
     </footer>
 
     <!-- Scripts -->
+    <!-- Tempus Dominus -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script
+      src="./vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"
+
+    ></script>
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
       https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/popup.js"></script>
-    <script src="vendor/tempusdominus/js/moment.min.js"></script>
-    <script src="vendor/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="vendor/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="assets/js/custom.js"></script>
     <script type="module" src="assets/js/firebaseInit.js"></script>
     <script type="module" src="assets/js/firebaseAuth.js"></script>

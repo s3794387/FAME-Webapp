@@ -15,7 +15,6 @@
       rel="stylesheet"
     />
 
-
     <title>Chain App Dev - App Landing Page HTML5 Template</title>
 
     <!-- Bootstrap core CSS -->
@@ -39,6 +38,10 @@ https://templatemo.com/tm-570-chain-app-dev
     <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css" />
     <link rel="stylesheet" href="assets/css/animated.css" />
     <link rel="stylesheet" href="assets/css/owl.css" />
+    <link
+      href="vendor/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="assets/css/timer.css" />
   </head>
 
@@ -68,16 +71,33 @@ https://templatemo.com/tm-570-chain-app-dev
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
               <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Chain App Dev" />
+                <img
+                  src="assets/images/logo.png"
+                  alt="Chain App Dev"
+                  width="100"
+                  height="100"
+                />
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
               <ul class="nav">
                 <li class="scroll-to-section">
-                  <a href="index.html" class="active">Home</a>
+                  <a href="index.html">Home</a>
                 </li>
                 <li class="scroll-to-section">
-                  <a href="profile.html">Profile</a>
+                  <a href="training_setup.html" class="active">Training</a>
+                </li>
+                <li>
+                  <div class="gradient-button" style="display: none">
+                    <a id="sign_in_modal_trigger" href="#sign-in-modal"
+                      ><i class="fa fa-sign-in-alt"></i> Sign In</a
+                    >
+                  </div>
+                  <div class="gradient-button" style="display: none">
+                    <a id="sign_out_modal_trigger" href="#user-modal"
+                      ><i class="fa fa-user-alt"></i>
+                    </a>
+                  </div>
                 </li>
               </ul>
               <a class="menu-trigger">
@@ -91,7 +111,7 @@ https://templatemo.com/tm-570-chain-app-dev
     </header>
     <!-- ***** Header Area End ***** -->
 
-    <div id="log-in-modal" class="popupContainer" style="display: none">
+    <div id="sign-in-modal" class="popupContainer" style="display: none">
       <div class="popupHeader">
         <span class="header_title">Login</span>
         <span class="modal_close"><i class="fa fa-times"></i></span>
@@ -209,18 +229,6 @@ https://templatemo.com/tm-570-chain-app-dev
       </section>
     </div>
 
-    <!-- User Content -->
-    <div class="container">
-      <div class="row">
-        <div class="quickstart-user-details-container" style="display: none">
-          Firebase sign-in status:
-          <span id="quickstart-sign-in-status">Unknown</span>
-          <div>Firebase auth <code>currentUser</code> object value:</div>
-          <pre><code id="quickstart-account-details">null</code></pre>
-        </div>
-      </div>
-    </div>
-
     <!-- Training Header -->
     <div id="training-header" class="training-header section">
       <div class="container">
@@ -235,18 +243,25 @@ https://templatemo.com/tm-570-chain-app-dev
         </div>
       </div>
     </div>
+
     <!-- Training Content -->
+
     <div id="training" class="training section">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
-            <div class="right-image wow fadeIn" data-wow-duration="1s">
+            <div
+              class="right-image wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
+            >
               <div class="image">
                 <img
-                  src="assets/images/mint.jpg"
+                  src="assets/images/Mint.jpg"
                   class="img img-responsive full-width"
                   id="training-image"
                 />
+                <div id="15stimer" style="position: absolute"></div>
               </div>
             </div>
           </div>
@@ -256,19 +271,16 @@ https://templatemo.com/tm-570-chain-app-dev
             <div
               class="section-heading wow fadeIn"
               data-wow-duration="1s"
-              data-wow-delay="0.5s"
+              data-wow-delay="1s"
             >
               <h4 id="image-title">Title</h4>
             </div>
           </div>
-        </div>
-        <div class="row justify-content-md-center">
-          <div class="col-2">
-            <div id="15stimer"></div>
-          </div>
-          <div class="col-2">
-            <div class="next-button">
-              <a id="next-button">Next<i class="fa fa-arrow-right"></i></a>
+          <div class="row justify-content-md-center">
+            <div class="col-2" align="center">
+              <div class="next-button">
+                <a id="next-button">Next<i class="fa fa-arrow-right"></i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -292,6 +304,5 @@ https://templatemo.com/tm-570-chain-app-dev
     <script src="assets/js/timer.js"></script>
     <script type="module" src="assets/js/firebaseAuth.js"></script>
     <script type="module" src="assets/js/firebaseTraining.js"></script>
-    <script type="module" src="assets/js/setup.js"></script>
   </body>
 </html>

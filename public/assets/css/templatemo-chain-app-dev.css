@@ -146,12 +146,12 @@ body {
 }
 
 ::selection {
-  background: #4b8ef1;
+  background: #011c2d;
   color: #fff !important;
 }
 
 ::-moz-selection {
-  background: #4b8ef1;
+  background: #011c2d;
   color: #fff !important;
 }
 
@@ -180,7 +180,7 @@ body {
 }
 
 .section-heading h4 {
-  color: #2a2a2a;
+  color: #011c2d;
   font-size: 30px;
   font-weight: 700;
   text-transform: capitalize;
@@ -189,7 +189,7 @@ body {
 
 .section-heading h4 em {
   font-style: normal;
-  color: #4b8ef1;
+  color: #011c2d;
   font-size: 40px;
 }
 
@@ -227,19 +227,18 @@ body {
 }
 
 .white-button a:hover {
-  background-color: #4b8ef1;
+  background-color: #011c2d;
   color: #fff !important;
 }
-
 
 
 .next-button a {
   white-space: nowrap;
   padding: 10px 20px !important;
-  color: #1a498f !important;
+  color: #011c2d !important;
   text-transform: capitalize;
-  font-size: 25px;
-  background-color: #b7faff;
+  font-size: 30px;
+  background-color: #ffd300;
   border-radius: 23px;
   font-weight: 500 !important;
   letter-spacing: 0.3px !important;
@@ -254,8 +253,8 @@ body {
 }
 
 .next-button a:hover {
-  background-color: #4b8ef1;
-  color: #fff !important;
+  background-color: #011c2d;
+  color: #ffd300 !important;
 }
 
 
@@ -278,26 +277,26 @@ body {
   padding: 10px 20px !important;
   color: #fff !important;
   text-transform: capitalize;
-  font-size: 20px;
-  background: rgb(19, 175, 240);
-  background: linear-gradient(105deg, rgba(91, 104, 235, 1) 0%, rgba(40, 225, 253, 1) 100%);
-  border-radius: 23px;
+  font-size: 26px;
+  background: #ffd300;
+  background: linear-gradient(105deg, #ffd300 0%, rgba(0, 168, 168) 100%);
+  border-radius: 30px;
   font-weight: 500 !important;
   letter-spacing: 0.3px !important;
   transition: all .5s;
 }
 
 .gradient-button a:hover {
-  color: #fff !important;
-  background: rgb(19, 175, 240);
-  background: linear-gradient(105deg, rgba(91, 104, 235, 1) 0%, rgba(40, 225, 253, 1) 100%);
+  color: #011c2d !important;
+  background: #ffd300;
+  background: linear-gradient(105deg, #ffeb87 0%, rgb(49, 255, 255) 100%);
 }
 
 .border-button a {
   display: inline-block !important;
   padding: 10px 20px !important;
-  color: #4b8ef1 !important;
-  border: 1px solid #4b8ef1;
+  color: #011c2d !important;
+  border: 1px solid #011c2d;
   text-transform: capitalize;
   font-size: 15px;
   display: inline-block;
@@ -309,7 +308,7 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #4b8ef1;
+  background-color: #011c2d;
   color: #fff !important;
 }
 
@@ -321,7 +320,7 @@ header
 */
 
 .background-header {
-  background-color: #fff !important;
+  background-color: #011c2d !important;
   height: 80px !important;
   border-bottom: none !important;
   position: fixed !important;
@@ -331,13 +330,12 @@ header
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.03);
 }
 
-.background-header .logo,
-.background-header .main-nav .nav li a {
-  color: #fff;
+.background-header .logo {
+  display: none;
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #4b8ef1;
+  color: #011c2d;
 }
 
 .background-header .nav li a.active {
@@ -349,7 +347,7 @@ header
   position: absolute;
   width: 100%;
   height: 1px;
-  background-color: #4b8ef1;
+  background-color: #011c2d;
   content: '';
   left: 50%;
   bottom: -20px;
@@ -361,13 +359,13 @@ header
 }
 
 .header-area {
-  background-color: transparent;
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgba(42, 42, 42, 0.2);
   position: absolute;
   left: 0px;
   right: 0px;
   z-index: 100;
-  height: 100px;
+  height: 105px;
   -webkit-transition: all .5s ease 0s;
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
@@ -381,6 +379,7 @@ header
 
 .header-area .main-nav .logo {
   float: left;
+  width: 100px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -446,7 +445,7 @@ header
   display: block;
   font-weight: 500;
   font-size: 24px;
-  color: #2a2a2a;
+  color: #011c2d;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -458,9 +457,13 @@ header
   letter-spacing: 1px;
 }
 
+.background-header .main-nav .nav li a {
+  color: #ffffff;
+}
+
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #4b8ef1 !important;
+  color: #ffd300 !important;
 }
 
 .header-area .main-nav .nav li:last-child a.active {
@@ -469,7 +472,7 @@ header
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #4b8ef1 !important;
+  color: #ffd300 !important;
   opacity: 1;
 }
 
@@ -482,14 +485,14 @@ header
   font-family: FontAwesome;
   content: "\f107";
   font-size: 12px;
-  color: #2a2a2a;
+  color: #ffffff;
   position: absolute;
   right: 18px;
   top: 12px;
 }
 
 .background-header .main-nav .nav li.submenu:after {
-  color: #2a2a2a;
+  color: #ffffff;
 }
 
 .header-area .main-nav .nav li.submenu ul {
@@ -515,7 +518,7 @@ header
   opacity: 1;
   display: block;
   background: #f7f7f7;
-  color: #2a2a2a !important;
+  color: #011c2d !important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
@@ -531,7 +534,7 @@ header
 
 .header-area .main-nav .nav li.submenu ul li a:hover {
   background: #fff;
-  color: #4b8ef1 !important;
+  color: #011c2d !important;
   padding-left: 25px;
 }
 
@@ -571,7 +574,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #2a2a2a;
+  background-color: #011c2d;
   display: block;
   position: absolute;
   width: 30px;
@@ -582,7 +585,7 @@ header
 .background-header .main-nav .menu-trigger span,
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #2a2a2a;
+  background-color: #ffd300;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -591,7 +594,7 @@ header
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #2a2a2a;
+  background-color: #011c2d;
   display: block;
   position: absolute;
   width: 30px;
@@ -602,7 +605,7 @@ header
 
 .background-header .main-nav .menu-trigger span:before,
 .background-header .main-nav .menu-trigger span:after {
-  background-color: #2a2a2a;
+  background-color: #ffd300;
 }
 
 .header-area .main-nav .menu-trigger span:before,
@@ -643,11 +646,11 @@ header
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #2a2a2a;
+  background-color: #011c2d;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #2a2a2a;
+  background-color: #ffd300;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -655,11 +658,11 @@ header
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #2a2a2a;
+  background-color: #011c2d;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #2a2a2a;
+  background-color: #ffd300;
 }
 
 .header-area.header-sticky {
@@ -671,7 +674,7 @@ header
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #4b8ef1;
+  color: #ffd300;
 }
 
 @media (max-width: 1200px) {
@@ -719,7 +722,7 @@ header
 
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #4b8ef1 !important;
+    color: #ffd300 !important;
     opacity: 1;
   }
 
@@ -794,7 +797,7 @@ header
 
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #4b8ef1 !important;
+    color: #011c2d !important;
   }
 
   .header-area .main-nav .nav li.submenu ul {
@@ -914,7 +917,7 @@ preloader
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #4b8ef1;
+  background: #011c2d;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -937,7 +940,7 @@ preloader
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #4b8ef1;
+  background: #011c2d;
   border-radius: 50%;
 }
 
@@ -960,7 +963,6 @@ Banner Style
 
 .main-banner:after {
   content: '';
-  background-image: url(../images/slider-left-dec.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -986,7 +988,7 @@ Banner Style
 
 .main-banner .left-content p {
   margin-bottom: 45px;
-  color: #2a2a2a;
+  color: #011c2d;
   font-weight: 400;
 }
 
@@ -1009,7 +1011,7 @@ Banner Style
 }
 
 .main-banner .left-content .white-button a {
-  background-color: #4b8ef1;
+  background-color: #011c2d;
   color: #fff !important;
 }
 
@@ -1178,7 +1180,8 @@ About Us
 .about-us .box-item {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
   padding: 10px 30px;
-  background-color: #fff;
+  background-color: #011c2d;
+  color: #ffd300;
   border-radius: 40px;
   margin-bottom: 30px;
   text-align: center;
@@ -1188,18 +1191,22 @@ About Us
   font-size: 30px;
   font-weight: 700;
   margin-top: 8px;
-  color: #2a2a2a;
+  color: #ffd300;
   transition: all .3s;
 }
 
 .about-us .box-item p {
   margin-bottom: 0px;
-  color: #4b4b4b;
+  color: #ffd300;
   font-size: 20px;
 }
 
-.about-us .box-item:hover h4 a {
-  color: #4b8ef1;
+.about-us .box-item:hover {
+  background-color: #ffd300;
+}
+
+.about-us .box-item:hover h4, .about-us .box-item:hover p, .about-us .box-item:hover h4 a {
+  color: #011c2d;
 }
 
 .about-us .gradient-button {
@@ -1247,7 +1254,7 @@ The Clients
 .menu .thumb h4 {
   margin-bottom: 0px;
   font-size: 20px;
-  color: #2a2a2a;
+  color: #011c2d;
 }
 
 .menu .thumb span.date {
@@ -1282,7 +1289,7 @@ The Clients
 .the-clients .naccs .menu div.active i,
 .the-clients .naccs .menu div.active span.rating,
 .the-clients .naccs .menu div.active .thumb {
-  color: #4b8ef1;
+  color: #011c2d;
 }
 
 .the-clients ul.nacc {
@@ -1360,7 +1367,7 @@ The Clients
 }
 
 .the-clients .nacc .thumb .down-content .right-content span {
-  color: #2a2a2a;
+  color: #011c2d;
 }
 
 
@@ -1441,7 +1448,7 @@ The Clients
 }
 
 .pricing-item-regular ul li {
-  color: #4b8ef1;
+  color: #011c2d;
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -1518,7 +1525,7 @@ The Clients
 }
 
 .pricing-item-pro ul li {
-  color: #4b8ef1;
+  color: #011c2d;
   font-size: 15px;
   margin-bottom: 15px;
 }
@@ -1784,16 +1791,24 @@ footer #search button {
 
 footer #search button:hover {
   background-color: #fff;
-  color: #4b8ef1;
+  color: #011c2d;
 }
 
 .footer-widget .logo img {
   max-width: 96px;
+  height: auto;
   margin-bottom: 30px;
 }
 
 .footer-widget h4 {
   font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.footer-widget h2 {
+  font-size: 18px;
   color: #fff;
   font-weight: 700;
   margin-bottom: 30px;
@@ -1880,13 +1895,13 @@ PopUp
 
 .btn {
   padding: 10px 20px;
-  background: #4b8ef1;
+  background: #011c2d;
   color: #fff;
   transition: all .3s;
 }
 
 .btn_red {
-  background: #4b8ef1;
+  background: #011c2d;
   color: #FFF;
 }
 
@@ -1895,7 +1910,7 @@ PopUp
 }
 
 .btn_red:hover {
-  color: #2a2a2a;
+  color: #011c2d;
   background: #E4E4E2;
 }
 
@@ -1940,7 +1955,7 @@ a.btn_red {
   right: 0;
   top: 0;
   padding: 10px 15px;
-  background: #4b8ef1;
+  background: #011c2d;
   cursor: pointer;
   color: #fff;
   font-size: 16px;
@@ -2055,7 +2070,7 @@ a.btn_red {
   clear: both;
   overflow: hidden;
   text-decoration: none;
-  color: #4b8ef1;
+  color: #011c2d;
   transition: all .3s;
 }
 
@@ -2147,7 +2162,7 @@ responsive
   }
 
   .main-banner .left-content h2 {
-    color: #2a2a2a;
+    color: #011c2d;
     margin-right: 0;
   }
 
@@ -2157,7 +2172,7 @@ responsive
   }
 
   .main-banner .left-content .white-button a {
-    background-color: #4b8ef1;
+    background-color: #011c2d;
     color: #fff !important;
   }
 
@@ -2280,7 +2295,7 @@ responsive
   }
 
   footer .section-heading h4 {
-    color: #2a2a2a;
+    color: #011c2d;
   }
 
   footer #search {
@@ -2316,11 +2331,11 @@ responsive
 
   footer #search button {
     background-color: #fff;
-    color: #4b8ef1;
+    color: #011c2d;
   }
 
   footer #search input::placeholder {
-    color: #2a2a2a;
+    color: #011c2d;
   }
 
   .header-area .main-nav .logo h4 {
@@ -2472,18 +2487,6 @@ responsive
 
 .bootstrap-datetimepicker-widget table td.today::before {
   border-bottom-color: var(--primary);
-}
-
-.specialRed {
-  background-color: orange;
-  color: #ff0000;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-
-.specialGreen {
-  background-color: orange;
-  color: #48ff00;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .bootstrap-datetimepicker-widget table td.day {

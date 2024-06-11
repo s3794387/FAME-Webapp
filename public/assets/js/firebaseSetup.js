@@ -24,6 +24,8 @@ var errorPen = 0;
 var start = false;
 var nextBtn = false;
 var error = false;
+var errorSound = new Audio("./assets/audio/8-bit-error.wav");
+var successSound = new Audio("./assets/audio/success.wav");
 
 const NextButton = document.getElementById("next-button");
 
@@ -52,6 +54,7 @@ onAuthStateChanged(auth, function (user) {
         for (var pen in pens_weight) {
           if (pens_weight[pen] > 1 && pen > currentPen) {
             error = true;
+            errorSound.play();
             errorPen = pen;
             document.getElementById("instruction").innerHTML =
               '<h3 style="color: #FF0000;">You have placed the pen in the wrong hole, please remove Pen in hole number ' +
@@ -64,6 +67,8 @@ onAuthStateChanged(auth, function (user) {
 
           if (pens_weight[pen] < 1 && pen < currentPen) {
             error = true;
+            errorSound.play();
+
             errorPen = pen;
             document.getElementById("instruction").innerHTML =
               '<h4 style="color: #FF0000;">You have picked up the wrong pen, please return Pen ' +
@@ -118,6 +123,7 @@ function showComplete() {
   ).innerHTML = `<h3 style="color: red">Congratulations! You have completed setting up your casing.</h3>`;
   NextButton.innerHTML = `<a href="training.html">Start Training</a>`;
   $("#next-button").show();
+  successSound.play();
 }
 function next() {
   nextBtn = true;

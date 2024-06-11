@@ -1,8 +1,7 @@
-
 .base-timer {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 .base-timer__svg {
@@ -10,13 +9,13 @@
 }
 
 .base-timer__circle {
-    fill: none;
+    fill: #ffd300;
     stroke: none;
 }
 
 .base-timer__path-elapsed {
     stroke-width: 7px;
-    stroke: grey;
+    stroke: #011c2d;
 }
 
 .base-timer__path-remaining {
@@ -43,11 +42,12 @@
 
 .base-timer__label {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    color:#011c2d;
     top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 35px;
 }
